@@ -3,6 +3,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { EmbedPlayer } from "@/components/embed-player"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from "@/components/ui/button"
+import { ExternalLink, Sparkles, MessageSquare, Brain } from "lucide-react"
 export default function HomePage() {
 
   return (
@@ -24,12 +26,15 @@ export default function HomePage() {
             </div>
             <div className="mx-auto max-w-4xl">
               <Tabs defaultValue="saludo" className="w-full">
-                <TabsList className="grid w-full grid-cols-2 mb-8">
+                <TabsList className="grid w-full grid-cols-3 mb-8">
                   <TabsTrigger value="saludo" className="text-base font-medium">
                     Saludo
                   </TabsTrigger>
                   <TabsTrigger value="real-o-no" className="text-base font-medium">
                     Real o no?
+                  </TabsTrigger>
+                  <TabsTrigger value="herramientas" className="text-base font-medium">
+                    Herramientas
                   </TabsTrigger>
                 </TabsList>
                 
@@ -76,6 +81,90 @@ export default function HomePage() {
                       <p className="text-sm text-muted-foreground">
                         <strong>Desafío:</strong> Observa estos videos y analiza si el contenido podría haber sido generado por IA o si parece ser contenido auténtico creado por humanos.
                       </p>
+                    </div>
+                  </div>
+                </TabsContent>
+                
+                <TabsContent value="herramientas" className="mt-0">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-semibold text-foreground mb-6">Herramientas de IA</h3>
+                    <p className="text-lg text-muted-foreground mb-8 text-justify">
+                      Accede a las principales herramientas de inteligencia artificial para crear contenido, 
+                      generar ideas y explorar las posibilidades de la IA en educación.
+                    </p>
+                    
+                    <div className="grid md:grid-cols-3 gap-6">
+                      {/* IA Studio */}
+                      <div className="bg-background p-6 rounded-xl border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        <div className="flex flex-col items-center text-center">
+                          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
+                            <Sparkles className="h-8 w-8 text-white" />
+                          </div>
+                          <h4 className="text-xl font-semibold text-foreground mb-3">IA Studio</h4>
+                          <p className="text-muted-foreground text-sm mb-4 text-justify">
+                            Plataforma de Google para crear y experimentar con modelos de IA generativa
+                          </p>
+                          <Button asChild className="w-full">
+                            <a 
+                              href="https://aistudio.google.com" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-center gap-2"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                              Acceder a IA Studio
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
+
+                      {/* ChatGPT */}
+                      <div className="bg-background p-6 rounded-xl border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        <div className="flex flex-col items-center text-center">
+                          <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mb-4">
+                            <MessageSquare className="h-8 w-8 text-white" />
+                          </div>
+                          <h4 className="text-xl font-semibold text-foreground mb-3">ChatGPT</h4>
+                          <p className="text-muted-foreground text-sm mb-4 text-justify">
+                            Asistente de IA conversacional de OpenAI para diálogos y generación de contenido
+                          </p>
+                          <Button asChild className="w-full">
+                            <a 
+                              href="https://chat.openai.com" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-center gap-2"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                              Acceder a ChatGPT
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
+
+                      {/* Gemini */}
+                      <div className="bg-background p-6 rounded-xl border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        <div className="flex flex-col items-center text-center">
+                          <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mb-4">
+                            <Brain className="h-8 w-8 text-white" />
+                          </div>
+                          <h4 className="text-xl font-semibold text-foreground mb-3">Gemini</h4>
+                          <p className="text-muted-foreground text-sm mb-4 text-justify">
+                            Modelo de IA multimodal de Google para texto, imágenes y análisis avanzado
+                          </p>
+                          <Button asChild className="w-full">
+                            <a 
+                              href="https://gemini.google.com" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-center gap-2"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                              Acceder a Gemini
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </TabsContent>
