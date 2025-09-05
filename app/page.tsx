@@ -40,7 +40,6 @@ export default function HomePage() {
                 
                 <TabsContent value="saludo" className="mt-0">
                   <div className="text-center">
-                    <h3 className="text-2xl font-semibold text-foreground mb-4">Saludo</h3>
                     <EmbedPlayer
                       provider="youtube"
                       url="https://youtu.be/LUMna33EOFE"
@@ -52,12 +51,9 @@ export default function HomePage() {
                 
                 <TabsContent value="real-o-no" className="mt-0">
                   <div className="text-center">
-                    <h3 className="text-2xl font-semibold text-foreground mb-6">Real o no?</h3>
-                    
                     {/* Videos de ejemplo */}
                     <div className="space-y-8">
                       <div>
-                        <h4 className="text-xl font-semibold text-foreground mb-4">Video 1</h4>
                         <EmbedPlayer
                           provider="youtube"
                           url="https://www.youtube.com/watch?v=PDE9b5iU8vI"
@@ -67,7 +63,6 @@ export default function HomePage() {
                       </div>
                       
                       <div>
-                        <h4 className="text-xl font-semibold text-foreground mb-4">Video 2</h4>
                         <EmbedPlayer
                           provider="youtube"
                           url="https://youtu.be/j8VGP5pr9OQ?si=s5Oh_9WsqmLwEoBC"
@@ -87,7 +82,6 @@ export default function HomePage() {
                 
                 <TabsContent value="herramientas" className="mt-0">
                   <div className="text-center">
-                    <h3 className="text-2xl font-semibold text-foreground mb-6">Herramientas de IA</h3>
                     <p className="text-lg text-muted-foreground mb-8 text-justify">
                       Accede a las principales herramientas de inteligencia artificial para crear contenido, 
                       generar ideas y explorar las posibilidades de la IA en educación.
