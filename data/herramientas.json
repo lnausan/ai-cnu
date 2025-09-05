@@ -1,0 +1,50 @@
+[
+  {
+    "id": "chatgpt-educacion",
+    "nombre": "ChatGPT para Educación",
+    "descripcion": "Asistente de IA conversacional para crear contenido educativo, planificar clases y generar evaluaciones personalizadas.",
+    "url": "https://chat.openai.com",
+    "categoria": "IA Generativa",
+    "tags": ["generación de contenido", "planificación", "evaluación"]
+  },
+  {
+    "id": "grammarly",
+    "nombre": "Grammarly",
+    "descripcion": "Corrector ortográfico y gramatical con IA que ayuda a estudiantes y docentes a mejorar su escritura académica.",
+    "url": "https://grammarly.com",
+    "categoria": "Productividad",
+    "tags": ["escritura", "corrección", "gramática"]
+  },
+  {
+    "id": "canva-magic-design",
+    "nombre": "Canva Magic Design",
+    "descripcion": "Herramienta de diseño con IA para crear materiales educativos visuales, presentaciones y recursos didácticos.",
+    "url": "https://canva.com/magic-design",
+    "categoria": "Diseño",
+    "tags": ["diseño", "presentaciones", "materiales didácticos"]
+  },
+  {
+    "id": "quillbot",
+    "nombre": "QuillBot",
+    "descripcion": "Parafraseador y resumidor de textos con IA para ayudar en la comprensión y redacción de contenido académico.",
+    "url": "https://quillbot.com",
+    "categoria": "Productividad",
+    "tags": ["parafraseo", "resumen", "escritura académica"]
+  },
+  {
+    "id": "socratic-google",
+    "nombre": "Socratic by Google",
+    "descripcion": "Aplicación educativa que usa IA para ayudar a estudiantes a resolver problemas de matemáticas, ciencias y más.",
+    "url": "https://socratic.org",
+    "categoria": "Evaluación",
+    "tags": ["resolución de problemas", "matemáticas", "ciencias"]
+  },
+  {
+    "id": "gradescope",
+    "nombre": "Gradescope",
+    "descripcion": "Plataforma de evaluación con IA que automatiza la calificación y proporciona retroalimentación detallada.",
+    "url": "https://gradescope.com",
+    "categoria": "Evaluación",
+    "tags": ["calificación automática", "retroalimentación", "evaluación"]
+  }
+]
