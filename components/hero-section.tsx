@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, Sparkles } from "lucide-react"
+import BlurText from "./BlurText"
 
 export function HeroSection() {
   return (
@@ -12,7 +13,7 @@ export function HeroSection() {
             <img
               src="/logoCNU.png"
               alt="Logo CNU - Centro Nacional de Universidades"
-              className="h-40 sm:h-48 md:h-56 lg:h-64 w-auto hover:scale-105 transition-transform duration-300"
+              className="h-48 sm:h-56 md:h-64 lg:h-72 w-auto hover:scale-105 transition-transform duration-300"
             />
           </div>
           
@@ -25,9 +26,13 @@ export function HeroSection() {
               </Link>
             </div>
           </div>
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl font-heading text-balance">
-            Inteligencia Artificial <span className="text-primary">y Educación</span>
-          </h1>
+          <BlurText
+            text="Inteligencia Artificial, TICS y educación"
+            delay={150}
+            animateBy="words"
+            direction="top"
+            className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl font-heading text-balance"
+          />
           <p className="mt-6 text-lg leading-8 text-muted-foreground text-pretty">
             Descubre cómo la inteligencia artificial está transformando la educación. Explora herramientas y
             contenidos interactivos que te ayudarán a integrar la IA en tu práctica educativa.

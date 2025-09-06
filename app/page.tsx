@@ -1,9 +1,23 @@
+"use client"
+
+import { useState } from "react"
 import { HeroSection } from "@/components/hero-section"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { EmbedPlayer } from "@/components/embed-player"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { X, ZoomIn } from "lucide-react"
+
 export default function HomePage() {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; title: string } | null>(null)
+
+  const openImageModal = (src: string, title: string) => {
+    setSelectedImage({ src, title })
+  }
+
+  const closeImageModal = () => {
+    setSelectedImage(null)
+  }
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -74,54 +88,94 @@ export default function HomePage() {
 
                 <TabsContent value="real-o-no" className="mt-0">
                   <div className="text-center">
-                    {/* Imágenes de ejemplo */}
-                    <div className="space-y-6">
-                      <div className="bg-background p-4 rounded-lg border shadow-lg">
-                        <h4 className="text-lg font-semibold text-foreground mb-4">Imagen 01</h4>
-                        <div className="relative">
-                          <img
-                            src="/01.jpeg"
-                            alt="Imagen de ejemplo 01 - Real o no?"
-                            className="mx-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full max-w-2xl"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                    {/* Carrusel de imágenes */}
+                    <div className="relative">
+                      <div className="overflow-x-auto scrollbar-hide">
+                        <div className="flex space-x-8 pb-4" style={{ scrollSnapType: 'x mandatory' }}>
+                          <div className="flex-shrink-0 w-96" style={{ scrollSnapAlign: 'start' }}>
+                            <div className="bg-background p-6 rounded-lg border shadow-lg hover:shadow-xl transition-all duration-300">
+                              <h4 className="text-xl font-semibold text-foreground mb-4">Imagen 01</h4>
+                              <div className="relative cursor-pointer group" onClick={() => openImageModal('/01.jpeg', 'Imagen 01')}>
+                                <img
+                                  src="/01.jpeg"
+                                  alt="Imagen de ejemplo 01 - Real o no?"
+                                  className="w-full h-80 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg group-hover:from-black/10 transition-all duration-300"></div>
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                  <div className="bg-black/50 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+                                    <span className="text-sm font-medium">Haz clic para ampliar</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div className="flex-shrink-0 w-96" style={{ scrollSnapAlign: 'start' }}>
+                            <div className="bg-background p-6 rounded-lg border shadow-lg hover:shadow-xl transition-all duration-300">
+                              <h4 className="text-xl font-semibold text-foreground mb-4">Imagen 02</h4>
+                              <div className="relative cursor-pointer group" onClick={() => openImageModal('/02.jpeg', 'Imagen 02')}>
+                                <img
+                                  src="/02.jpeg"
+                                  alt="Imagen de ejemplo 02 - Real o no?"
+                                  className="w-full h-80 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg group-hover:from-black/10 transition-all duration-300"></div>
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                  <div className="bg-black/50 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+                                    <span className="text-sm font-medium">Haz clic para ampliar</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div className="flex-shrink-0 w-96" style={{ scrollSnapAlign: 'start' }}>
+                            <div className="bg-background p-6 rounded-lg border shadow-lg hover:shadow-xl transition-all duration-300">
+                              <h4 className="text-xl font-semibold text-foreground mb-4">Imagen 03</h4>
+                              <div className="relative cursor-pointer group" onClick={() => openImageModal('/03.jpeg', 'Imagen 03')}>
+                                <img
+                                  src="/03.jpeg"
+                                  alt="Imagen de ejemplo 03 - Real o no?"
+                                  className="w-full h-80 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg group-hover:from-black/10 transition-all duration-300"></div>
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                  <div className="bg-black/50 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+                                    <span className="text-sm font-medium">Haz clic para ampliar</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div className="flex-shrink-0 w-96" style={{ scrollSnapAlign: 'start' }}>
+                            <div className="bg-background p-6 rounded-lg border shadow-lg hover:shadow-xl transition-all duration-300">
+                              <h4 className="text-xl font-semibold text-foreground mb-4">Imagen 04</h4>
+                              <div className="relative cursor-pointer group" onClick={() => openImageModal('/04.jpeg', 'Imagen 04')}>
+                                <img
+                                  src="/04.jpeg"
+                                  alt="Imagen de ejemplo 04 - Real o no?"
+                                  className="w-full h-80 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg group-hover:from-black/10 transition-all duration-300"></div>
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                  <div className="bg-black/50 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+                                    <span className="text-sm font-medium">Haz clic para ampliar</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       
-                      <div className="bg-background p-4 rounded-lg border shadow-lg">
-                        <h4 className="text-lg font-semibold text-foreground mb-4">Imagen 02</h4>
-                        <div className="relative">
-                          <img
-                            src="/02.jpeg"
-                            alt="Imagen de ejemplo 02 - Real o no?"
-                            className="mx-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full max-w-2xl"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
-                        </div>
-                      </div>
-                      
-                      <div className="bg-background p-4 rounded-lg border shadow-lg">
-                        <h4 className="text-lg font-semibold text-foreground mb-4">Imagen 03</h4>
-                        <div className="relative">
-                          <img
-                            src="/03.jpeg"
-                            alt="Imagen de ejemplo 03 - Real o no?"
-                            className="mx-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full max-w-2xl"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
-                        </div>
-                      </div>
-                      
-                      <div className="bg-background p-4 rounded-lg border shadow-lg">
-                        <h4 className="text-lg font-semibold text-foreground mb-4">Imagen 04</h4>
-                        <div className="relative">
-                          <img
-                            src="/04.jpeg"
-                            alt="Imagen de ejemplo 04 - Real o no?"
-                            className="mx-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full max-w-2xl"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
-                        </div>
+                      {/* Indicadores de scroll */}
+                      <div className="flex justify-center mt-4 space-x-2">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        <div className="w-2 h-2 bg-muted rounded-full"></div>
+                        <div className="w-2 h-2 bg-muted rounded-full"></div>
+                        <div className="w-2 h-2 bg-muted rounded-full"></div>
                       </div>
                     </div>
                     
@@ -260,6 +314,21 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
               </div>
+              
+              {/* Link a Sora */}
+              <div className="mt-8">
+                <a
+                  href="https://sora.chatgpt.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                >
+                  <span>Explorar Sora</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
             </div>
             
             <div className="mx-auto max-w-4xl">
@@ -320,6 +389,37 @@ export default function HomePage() {
 
       </main>
       <Footer />
+
+      {/* Modal de zoom para imágenes */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={closeImageModal}
+        >
+          <div className="relative max-w-4xl max-h-[90vh] w-full h-full flex items-center justify-center">
+            <button
+              onClick={closeImageModal}
+              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            
+            <div className="relative w-full h-full flex items-center justify-center">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.title}
+                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              />
+              
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-lg">
+                <h3 className="text-lg font-semibold">{selectedImage.title}</h3>
+                <p className="text-sm opacity-90">Haz clic fuera para cerrar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
