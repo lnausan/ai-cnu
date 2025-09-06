@@ -9,8 +9,6 @@ import { useTheme } from "next-themes"
 const navigation = [
   { name: "Inicio", href: "/" },
   { name: "Interacción", href: "/herramientas" },
-  { name: "Herramientas", href: "/videos" },
-  { name: "Presentaciones", href: "/presentaciones" },
 ]
 
 export function Header() {

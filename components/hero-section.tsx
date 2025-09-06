@@ -29,8 +29,8 @@ export function HeroSection() {
             Inteligencia Artificial <span className="text-primary">y Educación</span>
           </h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground text-pretty">
-            Descubre cómo la inteligencia artificial está transformando la educación. Explora herramientas, videos y
-            presentaciones que te ayudarán a integrar la IA en tu práctica educativa.
+            Descubre cómo la inteligencia artificial está transformando la educación. Explora herramientas y
+            contenidos interactivos que te ayudarán a integrar la IA en tu práctica educativa.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button asChild size="lg" className="font-semibold">
@@ -40,7 +40,7 @@ export function HeroSection() {
               </Link>
             </Button>
             <Button variant="outline" asChild size="lg">
-              <Link href="/videos">Ver videos</Link>
+              <Link href="/herramientas">Interacción</Link>
             </Button>
           </div>
         </div>

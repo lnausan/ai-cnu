@@ -3,8 +3,6 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { EmbedPlayer } from "@/components/embed-player"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Sparkles, MessageSquare, Brain } from "lucide-react"
 export default function HomePage() {
 
   return (
@@ -30,11 +28,11 @@ export default function HomePage() {
                   <TabsTrigger value="saludo" className="text-base font-medium">
                     Saludo
                   </TabsTrigger>
+                  <TabsTrigger value="com-vs-nvidia" className="text-base font-medium">
+                    .com vs nvidia
+                  </TabsTrigger>
                   <TabsTrigger value="real-o-no" className="text-base font-medium">
                     Real o no?
-                  </TabsTrigger>
-                  <TabsTrigger value="herramientas" className="text-base font-medium">
-                    Herramientas
                   </TabsTrigger>
                 </TabsList>
                 
@@ -48,8 +46,8 @@ export default function HomePage() {
                     />
                   </div>
                 </TabsContent>
-                
-                <TabsContent value="real-o-no" className="mt-0">
+
+                <TabsContent value="com-vs-nvidia" className="mt-0">
                   <div className="text-center">
                     {/* Videos de ejemplo */}
                     <div className="space-y-8">
@@ -57,7 +55,7 @@ export default function HomePage() {
                         <EmbedPlayer
                           provider="youtube"
                           url="https://www.youtube.com/watch?v=PDE9b5iU8vI"
-                          title="Video de ejemplo 1 - Real o no?"
+                          title="Video de ejemplo 1 - .com vs nvidia"
                           className="shadow-lg"
                         />
                       </div>
@@ -66,102 +64,75 @@ export default function HomePage() {
                         <EmbedPlayer
                           provider="youtube"
                           url="https://youtu.be/j8VGP5pr9OQ?si=s5Oh_9WsqmLwEoBC"
-                          title="Video de ejemplo 2 - Real o no?"
+                          title="Video de ejemplo 2 - .com vs nvidia"
                           className="shadow-lg"
                         />
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="real-o-no" className="mt-0">
+                  <div className="text-center">
+                    {/* Imágenes de ejemplo */}
+                    <div className="space-y-6">
+                      <div className="bg-background p-4 rounded-lg border shadow-lg">
+                        <h4 className="text-lg font-semibold text-foreground mb-4">Imagen 01</h4>
+                        <div className="relative">
+                          <img
+                            src="/01.jpeg"
+                            alt="Imagen de ejemplo 01 - Real o no?"
+                            className="mx-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full max-w-2xl"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-background p-4 rounded-lg border shadow-lg">
+                        <h4 className="text-lg font-semibold text-foreground mb-4">Imagen 02</h4>
+                        <div className="relative">
+                          <img
+                            src="/02.jpeg"
+                            alt="Imagen de ejemplo 02 - Real o no?"
+                            className="mx-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full max-w-2xl"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-background p-4 rounded-lg border shadow-lg">
+                        <h4 className="text-lg font-semibold text-foreground mb-4">Imagen 03</h4>
+                        <div className="relative">
+                          <img
+                            src="/03.jpeg"
+                            alt="Imagen de ejemplo 03 - Real o no?"
+                            className="mx-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full max-w-2xl"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-background p-4 rounded-lg border shadow-lg">
+                        <h4 className="text-lg font-semibold text-foreground mb-4">Imagen 04</h4>
+                        <div className="relative">
+                          <img
+                            src="/04.jpeg"
+                            alt="Imagen de ejemplo 04 - Real o no?"
+                            className="mx-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full max-w-2xl"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                        </div>
                       </div>
                     </div>
                     
                     <div className="mt-8 p-4 bg-background rounded-lg border">
                       <p className="text-sm text-muted-foreground">
-                        <strong>Desafío:</strong> Observa estos videos y analiza si el contenido podría haber sido generado por IA o si parece ser contenido auténtico creado por humanos.
+                        <strong>Desafío:</strong> Observa estas imágenes y analiza si el contenido podría haber sido generado por IA o si parece ser contenido auténtico creado por humanos.
                       </p>
                     </div>
                   </div>
                 </TabsContent>
                 
-                <TabsContent value="herramientas" className="mt-0">
-                  <div className="text-center">
-                    <p className="text-lg text-muted-foreground mb-8 text-justify">
-                      Accede a las principales herramientas de inteligencia artificial para crear contenido, 
-                      generar ideas y explorar las posibilidades de la IA en educación.
-                    </p>
-                    
-                    <div className="grid md:grid-cols-3 gap-6">
-                      {/* IA Studio */}
-                      <div className="bg-background p-6 rounded-xl border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div className="flex flex-col items-center text-center">
-                          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
-                            <Sparkles className="h-8 w-8 text-white" />
-                          </div>
-                          <h4 className="text-xl font-semibold text-foreground mb-3">IA Studio</h4>
-                          <p className="text-muted-foreground text-sm mb-4 text-justify">
-                            Plataforma de Google para crear y experimentar con modelos de IA generativa
-                          </p>
-                          <Button asChild className="w-full">
-                            <a 
-                              href="https://aistudio.google.com" 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="flex items-center justify-center gap-2"
-                            >
-                              <ExternalLink className="h-4 w-4" />
-                              Acceder a IA Studio
-                            </a>
-                          </Button>
-                        </div>
-                      </div>
-
-                      {/* ChatGPT */}
-                      <div className="bg-background p-6 rounded-xl border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div className="flex flex-col items-center text-center">
-                          <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mb-4">
-                            <MessageSquare className="h-8 w-8 text-white" />
-                          </div>
-                          <h4 className="text-xl font-semibold text-foreground mb-3">ChatGPT</h4>
-                          <p className="text-muted-foreground text-sm mb-4 text-justify">
-                            Asistente de IA conversacional de OpenAI para diálogos y generación de contenido
-                          </p>
-                          <Button asChild className="w-full">
-                            <a 
-                              href="https://chat.openai.com" 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="flex items-center justify-center gap-2"
-                            >
-                              <ExternalLink className="h-4 w-4" />
-                              Acceder a ChatGPT
-                            </a>
-                          </Button>
-                        </div>
-                      </div>
-
-                      {/* Gemini */}
-                      <div className="bg-background p-6 rounded-xl border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div className="flex flex-col items-center text-center">
-                          <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mb-4">
-                            <Brain className="h-8 w-8 text-white" />
-                          </div>
-                          <h4 className="text-xl font-semibold text-foreground mb-3">Gemini</h4>
-                          <p className="text-muted-foreground text-sm mb-4 text-justify">
-                            Modelo de IA multimodal de Google para texto, imágenes y análisis avanzado
-                          </p>
-                          <Button asChild className="w-full">
-                            <a 
-                              href="https://gemini.google.com" 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="flex items-center justify-center gap-2"
-                            >
-                              <ExternalLink className="h-4 w-4" />
-                              Acceder a Gemini
-                            </a>
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </TabsContent>
               </Tabs>
             </div>
           </div>
