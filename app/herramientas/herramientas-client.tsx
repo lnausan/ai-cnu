@@ -35,7 +35,7 @@ export function HerramientasClient() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* IA Studio */}
               <div className="bg-background p-6 rounded-xl border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <div className="flex flex-col items-center text-center">
@@ -103,6 +103,30 @@ export function HerramientasClient() {
                     >
                       <ExternalLink className="h-4 w-4" />
                       Acceder a Gemini
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Minimax */}
+              <div className="bg-background p-6 rounded-xl border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mb-4">
+                    <MessageSquare className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-semibold text-foreground mb-3">Minimax</h4>
+                  <p className="text-muted-foreground text-sm mb-4 text-justify">
+                    Plataforma de IA conversacional avanzada para diálogos inteligentes y generación de contenido
+                  </p>
+                  <Button asChild className="w-full">
+                    <a 
+                      href="https://chat.minimax.io/?type=chat&chatID=0" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Acceder a Minimax
                     </a>
                   </Button>
                 </div>
