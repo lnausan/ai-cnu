@@ -192,6 +192,8 @@ export default function HomePage() {
           </div>
         </section>
 
+        
+
         {/* IA Generativa */}
         <section className="bg-muted/50 py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -388,6 +390,50 @@ export default function HomePage() {
 
 
       </main>
+      {/* Desafíos y consideraciones éticas */}
+      <section className="bg-muted/50 py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-heading">
+              Desafíos y consideraciones éticas
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-muted-foreground">
+              Aunque la IA generativa ofrece muchas posibilidades, también presenta desafíos y preocupaciones éticas.
+            </p>
+          </div>
+
+          <div className="mx-auto max-w-4xl">
+            <div className="prose prose-lg max-w-none text-muted-foreground">
+              <p className="text-lg leading-8 mb-6 text-justify">
+                Algunos de los principales desafíos incluyen:
+              </p>
+
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="bg-background p-6 rounded-xl border shadow-sm">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Calidad y realismo</h3>
+                  <p className="leading-relaxed text-justify">
+                    Aunque los modelos de difusión y otros modelos generativos han mejorado significativamente, a veces el contenido generado aún puede ser imperfecto o poco realista.
+                  </p>
+                </div>
+
+                <div className="bg-background p-6 rounded-xl border shadow-sm">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Propiedad intelectual</h3>
+                  <p className="leading-relaxed text-justify">
+                    La generación de contenido nuevo basado en datos existentes plantea preguntas sobre la propiedad y los derechos de autor.
+                  </p>
+                </div>
+
+                <div className="bg-background p-6 rounded-xl border shadow-sm">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Uso malintencionado</h3>
+                  <p className="leading-relaxed text-justify">
+                    La IA generativa puede ser utilizada para crear noticias falsas y contenido engañoso, lo que puede tener graves consecuencias sociales y políticas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
 
       {/* Modal de zoom para imágenes */}

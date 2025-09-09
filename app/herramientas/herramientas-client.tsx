@@ -296,6 +296,90 @@ export function HerramientasClient() {
             </div>
           </div>
         </section>
+        
+        {/* Prompt en estilo código (después del Padlet) */}
+        <section className="py-16">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="bg-background p-8 rounded-xl border shadow-lg">
+              <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Prompt para generar imagen</h3>
+              <pre className="whitespace-pre overflow-x-auto bg-muted/50 p-6 rounded-lg border">
+                <code className="text-sm">
+                  <span className="text-muted-foreground"># Prompt para generador de imágenes (formato 16:9)</span><br />
+                  <span className="text-sky-500">prompt</span>
+                  <span className="text-foreground"> = </span>
+                  <span className="text-foreground">{'{'}</span><br />
+
+                  {/* objetivo */}
+                  &nbsp;&nbsp;<span className="text-purple-500">"objetivo"</span>
+                  <span className="text-foreground">: </span>
+                  <span className="text-emerald-500">"Generar imagen hiperrealista en formato panorámico (wallpaper 16:9)"</span><span className="text-foreground">,</span><br />
+
+                  {/* contexto */}
+                  &nbsp;&nbsp;<span className="text-purple-500">"contexto"</span>
+                  <span className="text-foreground">: </span>
+                  <span className="text-emerald-500">"Aula real de escuela secundaria pública en América Latina, año 2025"</span><span className="text-foreground">,</span><br />
+
+                  {/* comentario */}
+                  &nbsp;&nbsp;<span className="text-muted-foreground"># Escena: aprendizaje en contexto complejo con presencia de IA</span><br />
+
+                  {/* escena */}
+                  &nbsp;&nbsp;<span className="text-purple-500">"escena"</span>
+                  <span className="text-foreground">: </span>
+                  <span className="text-emerald-500">"Situación de aprendizaje con desigualdades visibles y uso de IA"</span><span className="text-foreground">,</span><br />
+
+                  {/* detalles */}
+                  &nbsp;&nbsp;<span className="text-purple-500">"detalles"</span>
+                  <span className="text-foreground">: [</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-emerald-500">"Docente explicando Inteligencia Artificial en el pizarrón, intentando mantener la atención"</span><span className="text-foreground">,</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-emerald-500">"Estudiante 1: con notebook moderna, usando una IA (p.ej. ChatGPT) para una tarea"</span><span className="text-foreground">,</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-emerald-500">"Estudiante 2: sin recursos básicos (sin mochila ni cuaderno), escribiendo en hojas sueltas"</span><span className="text-foreground">,</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-emerald-500">"Estudiante 3: distraído, mirando TikTok en el celular, desconectado de la clase"</span><span className="text-foreground">,</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-emerald-500">"Estudiante 4: comprometido/a, tomando apuntes a mano y haciendo preguntas"</span><br />
+                  &nbsp;&nbsp;<span className="text-foreground">],</span><br />
+
+                  {/* ambiente */}
+                  &nbsp;&nbsp;<span className="text-purple-500">"ambiente"</span>
+                  <span className="text-foreground">: </span>
+                  <span className="text-emerald-500">"Contrastes en vestimenta, materiales y lenguaje corporal; algunas sillas/mesas rotas o desiguales"</span><span className="text-foreground">,</span><br />
+
+                  {/* cartel */}
+                  &nbsp;&nbsp;<span className="text-purple-500">"cartel"</span>
+                  <span className="text-foreground">: </span>
+                  <span className="text-amber-500">"¿Usás IA o la IA te usa a vos?"</span><span className="text-foreground">,</span><br />
+
+                  {/* extras */}
+                  &nbsp;&nbsp;<span className="text-purple-500">"extras"</span>
+                  <span className="text-foreground">: [</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-emerald-500">"Mochila con stickers de ChatGPT y TikTok"</span><span className="text-foreground">,</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-emerald-500">"Un estudiante grabando un video para redes sociales"</span><span className="text-foreground">,</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-emerald-500">"Docente con vocación pero visiblemente agotado/a"</span><br />
+                  &nbsp;&nbsp;<span className="text-foreground">],</span><br />
+
+                  {/* iluminación y estilo */}
+                  &nbsp;&nbsp;<span className="text-purple-500">"iluminacion"</span>
+                  <span className="text-foreground">: </span>
+                  <span className="text-emerald-500">"Luz natural de la mañana entrando por la ventana"</span><span className="text-foreground">,</span><br />
+                  &nbsp;&nbsp;<span className="text-purple-500">"estilo"</span>
+                  <span className="text-foreground">: </span>
+                  <span className="text-emerald-500">"Hiperrealista, fotografía documental, sin estética futurista"</span><span className="text-foreground">,</span><br />
+                  &nbsp;&nbsp;<span className="text-purple-500">"ambientacion"</span>
+                  <span className="text-foreground">: </span>
+                  <span className="text-emerald-500">"Escuela urbana pública de Argentina, Brasil o país latinoamericano"</span><span className="text-foreground">,</span><br />
+
+                  {/* salida */}
+                  &nbsp;&nbsp;<span className="text-purple-500">"formato_salida"</span>
+                  <span className="text-foreground">: {'{'}</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-purple-500">"proporcion"</span><span className="text-foreground">: </span><span className="text-emerald-500">"16:9"</span><span className="text-foreground">,</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-purple-500">"resolucion_minima"</span><span className="text-foreground">: </span><span className="text-emerald-500">"1920x1080"</span><span className="text-foreground">,</span><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-purple-500">"uso"</span><span className="text-foreground">: </span><span className="text-emerald-500">"Fondo de pantalla"</span><br />
+                  &nbsp;&nbsp;<span className="text-foreground">{'}'}</span><br />
+
+                  <span className="text-foreground">{'}'}</span>
+                </code>
+              </pre>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
