@@ -9,6 +9,7 @@ import { useTheme } from "next-themes"
 const navigation = [
   { name: "Inicio", href: "/" },
   { name: "Interacción", href: "/herramientas" },
+  { name: "Aplicación", href: "/aplicacion" },
 ]
 
 export function Header() {
@@ -39,7 +40,11 @@ export function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium leading-6 text-foreground hover:text-primary transition-colors"
+              className={`text-sm font-medium leading-6 transition-colors ${
+                item.name === "Aplicación"
+                  ? "bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 font-semibold"
+                  : "text-foreground hover:text-primary"
+              }`}
             >
               {item.name}
             </Link>
@@ -84,7 +89,11 @@ export function Header() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-foreground hover:bg-muted"
+                      className={`-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 transition-colors ${
+                        item.name === "Aplicación"
+                          ? "bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
+                          : "text-foreground hover:bg-muted"
+                      }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}

@@ -37,8 +37,8 @@ export function HeroSection() {
             Descubre cómo la inteligencia artificial está transformando la educación. Explora herramientas y
             contenidos interactivos que te ayudarán a integrar la IA en tu práctica educativa.
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button asChild size="lg" className="font-semibold">
+          <div className="mt-10 flex items-center justify-center gap-x-6 flex-wrap">
+            <Button variant="outline" asChild size="lg">
               <Link href="/herramientas">
                 <Sparkles className="mr-2 h-4 w-4" />
                 Explorar contenidos
@@ -46,6 +46,9 @@ export function HeroSection() {
             </Button>
             <Button variant="outline" asChild size="lg">
               <Link href="/herramientas">Interacción</Link>
+            </Button>
+            <Button asChild size="lg" className="font-semibold">
+              <Link href="/aplicacion">Aplicaciones</Link>
             </Button>
           </div>
         </div>
