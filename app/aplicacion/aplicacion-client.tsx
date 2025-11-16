@@ -153,6 +153,19 @@ export function AplicacionClient() {
         {/* Padlet Embed */}
         <section className="py-16">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            {/* QR Code para acceso rápido */}
+            <div className="mb-8 flex justify-center">
+              <div className="bg-background p-4 rounded-xl border shadow-lg">
+                <img
+                  src="/qr_ai_cnu.png"
+                  alt="Código QR para acceder a la página de Aplicación"
+                  className="w-48 h-48 sm:w-56 sm:h-56"
+                />
+                <p className="mt-3 text-sm text-sky-500 font-medium animate-pulse hover:animate-none transition-all text-center">
+                  Escanea para acceder
+                </p>
+              </div>
+            </div>
             <div className="mx-auto max-w-2xl text-center mb-8">
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-heading">
                 Actividad
@@ -160,6 +173,81 @@ export function AplicacionClient() {
               <p className="mt-4 text-lg leading-8 text-muted-foreground">
                 Accede al Padlet para realizar y compartir tus publicaciones
               </p>
+            </div>
+            
+            {/* Consigna en formato código */}
+            <div className="w-full mb-8">
+              <div className="bg-background p-8 rounded-xl border shadow-lg">
+                <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Consigna</h3>
+                <pre className="whitespace-pre overflow-x-auto bg-muted/50 p-6 rounded-lg border">
+                  <code className="text-sm">
+                    <span className="text-amber-500">1️⃣</span>
+                    <span className="text-purple-500"> Búsqueda y creación de material en Comet</span>
+                    <br /><br />
+                    &nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-emerald-500"> Elegí un tema vinculado a tu práctica docente</span>
+                    <span className="text-muted-foreground"> (ej.: "evaluación formativa", "ecosistemas", "fracciones", etc.).</span>
+                    <br /><br />
+                    &nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-emerald-500"> En Comet, realizá una búsqueda sobre ese tema</span>
+                    <span className="text-muted-foreground"> y, a partir de lo que encuentres, creá un material corto, que puede ser:</span>
+                    <br /><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-sky-500"> una hoja de cálculo</span>
+                    <span className="text-muted-foreground"> (ej.: planilla de seguimiento de estudiantes),</span>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-sky-500"> un boceto de dashboard interactivo</span>
+                    <span className="text-muted-foreground">,</span>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-sky-500"> una lista de videos recomendados</span>
+                    <span className="text-muted-foreground">,</span>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-sky-500"> un resumen/guía para tus clases</span>
+                    <span className="text-muted-foreground">.</span>
+                    <br /><br /><br />
+                    <span className="text-amber-500">2️⃣</span>
+                    <span className="text-purple-500"> Agregar el material a NotebookLM</span>
+                    <br /><br />
+                    &nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-emerald-500"> Cargá ese material en NotebookLM</span>
+                    <span className="text-muted-foreground"> (o enlazalo, según el formato).</span>
+                    <br /><br />
+                    &nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-emerald-500"> Generá un Notebook nuevo</span>
+                    <span className="text-muted-foreground"> con ese contenido.</span>
+                    <br /><br />
+                    &nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-emerald-500"> Obtené el link compartible</span>
+                    <span className="text-muted-foreground"> del Notebook.</span>
+                    <br /><br />
+                    &nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-emerald-500"> Agregá como participante/invitado el correo:</span>
+                    <span className="text-rose-500 font-mono"> soporte@cnu.edu.ar</span>
+                    <span className="text-muted-foreground">.</span>
+                    <br /><br /><br />
+                    <span className="text-amber-500">3️⃣</span>
+                    <span className="text-purple-500"> Subir el link al Padlet</span>
+                    <br /><br />
+                    &nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-emerald-500"> En el Padlet del taller, creá un post con:</span>
+                    <br /><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-sky-500"> Título:</span>
+                    <span className="text-muted-foreground"> Tema elegido.</span>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-sky-500"> Texto breve (2–3 líneas):</span>
+                    <span className="text-muted-foreground"> para qué sirve el material que creaste.</span>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-foreground">•</span>
+                    <span className="text-sky-500"> Link al NotebookLM</span>
+                    <span className="text-muted-foreground"> (el que generaste en el paso anterior).</span>
+                  </code>
+                </pre>
+              </div>
             </div>
             <div 
               className="padlet-embed rounded-lg shadow-lg overflow-hidden"
