@@ -121,7 +121,7 @@ export function AplicacionClient() {
                     </p>
                     <Button asChild className="w-full">
                       <a 
-                        href="https://www.comet.com" 
+                        href="https://www.perplexity.ai/comet" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-2"
@@ -181,6 +181,10 @@ export function AplicacionClient() {
                 <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Consigna</h3>
                 <pre className="whitespace-pre overflow-x-auto bg-muted/50 p-6 rounded-lg border">
                   <code className="text-sm">
+                    <span className="text-emerald-500">Elegir un tema vinculado a su práctica docente</span>
+                    <span className="text-muted-foreground"> (ej.: "evaluación formativa", "ecosistemas", "fracciones", etc.).</span>
+                    <span className="text-emerald-500"> Y a partir de eso:</span>
+                    <br /><br />
                     <span className="text-amber-500">1️⃣</span>
                     <span className="text-purple-500"> Agregar el material a NotebookLM</span>
                     <br /><br />
