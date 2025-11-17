@@ -182,33 +182,6 @@ export function AplicacionClient() {
                 <pre className="whitespace-pre overflow-x-auto bg-muted/50 p-6 rounded-lg border">
                   <code className="text-sm">
                     <span className="text-amber-500">1️⃣</span>
-                    <span className="text-purple-500"> Búsqueda y creación de material en Comet</span>
-                    <br /><br />
-                    &nbsp;&nbsp;<span className="text-foreground">•</span>
-                    <span className="text-emerald-500"> Elegí un tema vinculado a tu práctica docente</span>
-                    <span className="text-muted-foreground"> (ej.: "evaluación formativa", "ecosistemas", "fracciones", etc.).</span>
-                    <br /><br />
-                    &nbsp;&nbsp;<span className="text-foreground">•</span>
-                    <span className="text-emerald-500"> En Comet, realizá una búsqueda sobre ese tema</span>
-                    <span className="text-muted-foreground"> y, a partir de lo que encuentres, creá un material corto, que puede ser:</span>
-                    <br /><br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-foreground">•</span>
-                    <span className="text-sky-500"> una hoja de cálculo</span>
-                    <span className="text-muted-foreground"> (ej.: planilla de seguimiento de estudiantes),</span>
-                    <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-foreground">•</span>
-                    <span className="text-sky-500"> un boceto de dashboard interactivo</span>
-                    <span className="text-muted-foreground">,</span>
-                    <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-foreground">•</span>
-                    <span className="text-sky-500"> una lista de videos recomendados</span>
-                    <span className="text-muted-foreground">,</span>
-                    <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-foreground">•</span>
-                    <span className="text-sky-500"> un resumen/guía para tus clases</span>
-                    <span className="text-muted-foreground">.</span>
-                    <br /><br /><br />
-                    <span className="text-amber-500">2️⃣</span>
                     <span className="text-purple-500"> Agregar el material a NotebookLM</span>
                     <br /><br />
                     &nbsp;&nbsp;<span className="text-foreground">•</span>
@@ -228,7 +201,7 @@ export function AplicacionClient() {
                     <span className="text-rose-500 font-mono"> soporte@cnu.edu.ar</span>
                     <span className="text-muted-foreground">.</span>
                     <br /><br /><br />
-                    <span className="text-amber-500">3️⃣</span>
+                    <span className="text-amber-500">2️⃣</span>
                     <span className="text-purple-500"> Subir el link al Padlet</span>
                     <br /><br />
                     &nbsp;&nbsp;<span className="text-foreground">•</span>
